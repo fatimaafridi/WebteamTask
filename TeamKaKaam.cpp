@@ -19,7 +19,7 @@ int main(){
     }
 }
 void robotTest(string array){
-    int curr = N; 
+    int curr = N; //default start is a F in North direction (+ive y axis)
     int x = 0;
     int y = 0;
     int val = array.length();
@@ -30,6 +30,7 @@ void robotTest(string array){
         else if (array[i] == 'L'){
             curr = (curr+3) % 4;
         }
+        // The robot changes it's orientation upon L and R and moves a distance plus one upon F
         else{
             if (curr == N){
                 y++;
